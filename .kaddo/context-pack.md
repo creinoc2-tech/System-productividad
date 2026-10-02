@@ -20,22 +20,48 @@
 
 ## Current Phase
 
-Phase: Delivery Preparation
+Phase: Active Delivery
 
 Reason:
 
 - Roadmap available
-- 0 materialized work item(s)
+- 10 materialized work item(s)
+- 11 roadmap candidate(s) remaining
+- draft: 10
+- Ownership coverage 0%
 
-Recommended next: kaddo create --from roadmap, work-item-agent
+Recommended next: work-item-agent, kaddo owners suggest
 
-Next step: Run `kaddo create --from roadmap`, then refine with work-item-agent
+Next step: Run `kaddo add skills` to install reusable Kaddo skills.
+
+## Delivery State
+
+- Phase: Setup
+- Draft Work Items: 10
+- Ready Work Items: 0
+- In-progress Work Items: 0
+- Ownership coverage: 0/10
+- Remaining Work Item candidates: 11
+
+## Next Step Recommendation
+
+- Run `kaddo add skills` to install reusable Kaddo skills.
+  - id: add-skills
+  - reason: No Kaddo skills are installed yet.
+  - command: `kaddo add skills`
+
+## Project Route
+
+Route: new · Progress: 6/12
+
+Current:
+- Refine Work Item — work-item-agent / work-item-refinement
 
 ## Knowledge Layers
 
 Project knowledge is organized in four layers: **Business → Product → Tech → Delivery**.
 
-Knowledge maturity — Business: Consolidated · Product: Consolidated · Tech: Structured · Delivery: Partial
+Knowledge maturity — Business: Consolidated · Product: Consolidated · Tech: Structured · Delivery: Traceable
 
 ### Business — Consolidated
 - ✓ business.md
@@ -45,9 +71,20 @@ Knowledge maturity — Business: Consolidated · Product: Consolidated · Tech: 
 
 ### Tech — Structured
 - ✓ codebase.md
+- ✓ current-state.md
 - ✓ knowledge.md
 
-### Delivery — Partial
+### Delivery — Traceable
+- ✓ WI-001-consolidar-base-typescript-frontend.md
+- ✓ WI-002-configurar-vitest-frontend.md
+- ✓ WI-003-inicializar-backend-nestjs.md
+- ✓ WI-004-configurar-postgresql-orm.md
+- ✓ WI-005-estrategia-pruebas-backend.md
+- ✓ WI-006-registro-login-correo-contrasena.md
+- ✓ WI-007-sesion-cookie-guard-global.md
+- ✓ WI-008-onboarding-inicial.md
+- ✓ WI-009-crear-editar-listar-workspaces.md
+- ✓ WI-010-invitaciones-por-enlace-roles.md
 - ✓ roadmap.md
 
 ## Technical Inventory
@@ -58,17 +95,64 @@ Scan baseline missing. Run `kaddo scan` for better context.
 
 > What is true about this product right now.
 
-## Roadmap
+## Roadmap Status
 
-- Roadmap candidates: 0
-- Materialized work items: 0
-- Remaining candidates: 0
+- Initiatives: 8
+- Work Item candidates: 21
+- Materialized Work Items: 10
+- Remaining Work Item candidates: 11
 
-> What we intend to build and why.
+Work Item candidates are not yet Work Items. Materialize them with `kaddo create --from roadmap`.
+
+Generado con Kaddo Roadmap Agent. Las iniciativas y los work items de abajo son **candidatos**
+para revisión humana, no compromisos finales.
+
+## Roadmap Quality
+
+Initiatives:
+- Candidates evaluated: 8
+- Grounded: 0/8
+- With related domain: 0/8
+- With related capability: 8/8
+- With source signals: 0/8
+
+Work Item Candidates:
+- Candidates: 21
+- With source initiative: 21/21
+- With related domain: 21/21
+- With related capability: 21/21
+
+Roadmap quality: needs refinement. Use the roadmap-agent to add domain / capability / source signals.
 
 ## Active Work Items
 
-No active work items found.
+- WI-001 [chore] [K2] (draft) — Consolidar la base TypeScript del frontend
+  - Source: roadmap · WI-CANDIDATE-001
+- WI-002 [chore] [K2] (draft) — Configurar Vitest en el frontend
+  - Source: roadmap · WI-CANDIDATE-002
+- WI-003 [chore] [K2] (draft) — Inicializar el proyecto NestJS del backend
+  - Source: roadmap · WI-CANDIDATE-003
+- WI-004 [chore] [K3] (draft) — Configurar PostgreSQL y el ORM
+  - Source: roadmap · WI-CANDIDATE-004
+- WI-005 [chore] [K2] (draft) — Estrategia de pruebas del backend
+  - Source: roadmap · WI-CANDIDATE-005
+- WI-006 [feature] [K3] (draft) — Registro e inicio de sesión con correo y contraseña
+  - Source: roadmap · WI-CANDIDATE-006
+- WI-007 [feature] [K3] (draft) — Sesión en cookie httpOnly y guard global de autenticación
+  - Source: roadmap · WI-CANDIDATE-007
+- WI-008 [feature] [K2] (draft) — Onboarding inicial (nombre, tipo de uso y primer workspace)
+  - Source: roadmap · WI-CANDIDATE-008
+- WI-009 [feature] [K3] (draft) — Crear, editar y listar workspaces
+  - Source: roadmap · WI-CANDIDATE-009
+- WI-010 [feature] [K3] (draft) — Invitaciones por enlace con cuatro códigos de rol
+  - Source: roadmap · WI-CANDIDATE-010
+
+## Delivery Mix
+
+Active Work Items by type:
+
+- Chores: 5
+- Features: 5
 
 ## Artifacts and Ownership
 
@@ -78,21 +162,21 @@ No artifacts declare code ownership yet.
 
 - Scan baseline missing. Run `kaddo scan` for better context.
 - No technical inventory found. Run `kaddo scan` to generate it.
-- No work items found.
 
 ## Recommended Agent Handoff
 
-Recommended next for the **Delivery Preparation** phase:
+Recommended next for the **Active Delivery** phase:
 
-1. kaddo create --from roadmap
-2. work-item-agent
+1. work-item-agent
+2. kaddo owners suggest
 
 Next step:
 
-- Run `kaddo create --from roadmap`, then refine with work-item-agent
+- Run `kaddo add skills` to install reusable Kaddo skills.
 
 ## Instructions for the LLM
 
-- Materialize roadmap candidates with `kaddo create --from roadmap`.
-- Use the work-item-agent to refine them.
-- Do not implement yet.
+- Refine draft Work Items to ready.
+- Use the work-item-agent.
+- Do not implement unless the user explicitly asks.
+- Ownership is incomplete — propose `code:` globs (run `kaddo owners suggest`).

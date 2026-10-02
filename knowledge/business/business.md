@@ -1,6 +1,8 @@
 ---
 type: business
 status: draft
+generated_by: business-agent
+template_version: 1
 ---
 
 > Idioma del proyecto: **español**. Escribe este conocimiento en español. Mantén en inglés el código, los nombres de archivo, los comandos y las claves de configuración.
